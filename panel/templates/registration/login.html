@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ingreso al Sistema</title>
+  <style>
+
+    *{
+      background-color: #34495E;
+    }
+
+    h1, h2 {
+      justify-content: center;
+      margin-left: 550px;
+    }
+
+    input{
+      background-color: #fff;
+    }
+
+    a{
+      color: black;
+    }
+    /* Tu CSS aquí */
+    .form-login {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .input-span {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .label-user {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="username"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+
+    .span_i {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #28a745; /* Color verde de Bootstrap para éxito */
+        color: #fff;
+        border: 1px solid #28a745;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #218838; /* Color verde más oscuro al pasar el ratón */
+        border-color: #1e7e34;
+    }
+</style>
+</head>
+<link rel="stylesheet" href="{% static 'build/css/style.css' %}">
+<body>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-body">
+
+              <h2>Ingresa tus datitos: </h2>
+              <hr>
+              <h1 class="heading-pag"><span>Ingresar</span></h1> 
+  <section>
+    <div>
+      <form action="" method="post" class="form-login">
+        {% csrf_token %}
+        <span class="input-span">
+        <label for="email" class="label-user">Usuario</label>
+        <input type="username" name="username" id="username"></span>
+        <span class="input-span">
+        <label for="password" class="label-user">Contraseña</label>
+        <input type="password" name="password" id="password"></span>
+        <span class="span_i"><a href="#">Olvidaste tu contraseña?</a></span>
+        <button type="submit" class="btn btn-success-">Iniciar Sesion</button>
+        
+      </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+
+<!-- css -->
+
+
+</html>
+
